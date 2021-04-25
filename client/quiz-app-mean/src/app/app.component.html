@@ -1,0 +1,64 @@
+<!--Navbar-->
+<mdb-navbar
+  SideClass="navbar navbar-expand-lg navbar-dark unique-color"
+  [containerInside]="false"
+>
+  <!-- Navbar brand -->
+  <mdb-navbar-brand
+    ><a class="navbar-brand" href="#">CMPS Quiz</a></mdb-navbar-brand
+  >
+
+  <!-- Collapsible content -->
+  <links>
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link waves-light" mdbWavesEffect routerLink="/create-quiz"
+          >Create Quiz<span class="sr-only">(current)</span></a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" routerLink="list-quiz" mdbWavesEffect
+          >View Quizzes</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" routerLink="quiz/:id" mdbWavesEffect
+          >View Single Quiz</a
+        >
+      </li>
+    </ul>
+    <!-- Links -->
+
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="https://github.com/SilvinPradhan/Quiz-App-MEAN"
+        >
+          <mdb-icon fab icon="github"></mdb-icon>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          <div class="btn-group" mdbDropdown>
+            <mdb-icon
+              fas
+              icon="user"
+              mdbDropdownToggle
+              mdbTooltip="Silvin"
+              placement="bottom"
+            ></mdb-icon>
+            <!-- Dropdown[if required] -->
+            <!-- <div class="dropdown-menu dropdown-menu-right dropdown-primary">
+              <a class="dropdown-item" href="#">Admin</a>
+            </div> -->
+          </div>
+        </a>
+      </li>
+    </ul>
+  </links>
+  <!-- Collapsible content -->
+</mdb-navbar>
+<!--/.Navbar-->
+<router-outlet></router-outlet>

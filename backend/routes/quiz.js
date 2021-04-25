@@ -7,7 +7,6 @@ const { listAll, listSingle, create, submitSingle, remove } = require('../contro
 router.post('/new', create);
 router.get('/quizzes', listAll);
 router.get('/quiz/:id', listSingle);
-router.post('/quiz/id', submitSingle);
 router.delete('/quiz/:id', remove);
 
 module.exports = router;
