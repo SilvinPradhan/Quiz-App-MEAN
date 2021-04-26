@@ -1,4 +1,5 @@
 import { ApiService } from './../../service/api.service';
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -17,7 +18,7 @@ export class QuizCreateComponent implements OnInit {
   };
   submitted = false;
 
-  constructor(private quizService: ApiService) {}
+  constructor(private quizService: ApiService, private router: Router) {}
 
   ngOnInit(): void {}
   saveQuiz(): void {
@@ -35,6 +36,7 @@ export class QuizCreateComponent implements OnInit {
       (res) => {
         console.log(res);
         this.submitted = true;
+        this.router.navigateByUrl('/list-quiz');
       },
       (error) => {
         console.log(error);

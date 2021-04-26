@@ -1,1 +1,97 @@
-<p>quiz-create works!</p>
+<div class="container" style="margin: auto">
+  <div class="row">
+    <div class="col-md-8">
+      <mdb-card>
+        <div
+          class="view rgba-white-slight waves-light"
+          style="width: 400px; margin: auto"
+          mdbWavesEffect
+        >
+          <mdb-card-img
+            src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
+            alt="Card image cap"
+          ></mdb-card-img>
+          <a>
+            <div class="mask"></div>
+          </a>
+          <mdb-card-body>
+            <mdb-card-title><h4>Create Quiz</h4></mdb-card-title>
+            <mdb-card-text>
+              Create on quiz at a time. Go to List Quiz to get all the quizzes.
+            </mdb-card-text>
+          </mdb-card-body>
+        </div>
+      </mdb-card>
+    </div>
+    <div class="col-md-4">
+      <div class="submit-form" style="width: 400px; margin: auto; padding: 5px">
+        <div *ngIf="!submitted">
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input
+              type="text"
+              class="form-control"
+              id="title"
+              required
+              [(ngModel)]="quiz.title"
+              name="title"
+            />
+          </div>
+          <div class="form-group">
+            <label for="description">Description</label>
+            <input
+              class="form-control"
+              id="description"
+              required
+              [(ngModel)]="quiz.description"
+              name="description"
+            />
+          </div>
+          <div class="form-group">
+            <div>
+              <label for="alternative">Answer 1</label>
+              <input
+                class="form-control"
+                id="text"
+                required
+                [(ngModel)]="quiz.alternative.text"
+                name="text"
+              />
+            </div>
+            <div>
+              <input
+                class="form-control"
+                id="isCorrect"
+                required
+                [(ngModel)]="quiz.alternative.isCorrect"
+                name="isCorrect
+                "
+              />
+            </div>
+          </div>
+          <button
+            mdbBtn
+            type="button"
+            gradient="purple"
+            mdbWavesEffect
+            (click)="saveQuiz()"
+          >
+            Create
+          </button>
+        </div>
+        <div *ngIf="submitted">
+          <h3>The Quiz has been submitted successfully!</h3>
+          <button
+            mdbBtn
+            type="button"
+            gradient="blue"
+            mdbWavesEffect
+            (click)="newQuiz()"
+          >
+            Add Quiz
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
