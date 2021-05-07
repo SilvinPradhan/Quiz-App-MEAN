@@ -57,7 +57,7 @@
                 class="form-control"
                 id="text"
                 required
-                [(ngModel)]="quiz.alternative.text"
+                [(ngModel)]="quiz.alternative[0].text1"
                 name="text"
               />
             </div>
@@ -66,7 +66,7 @@
                 class="form-control"
                 id="isCorrect"
                 required
-                [(ngModel)]="quiz.alternative.isCorrect"
+                [(ngModel)]="quiz.alternative[0].isCorrect1"
                 name="isCorrect
                 "
               />
@@ -74,12 +74,12 @@
           </div>
           <div class="form-group">
             <div>
-              <label for="alternative">Answer 1</label>
+              <label for="alternative">Answer 2</label>
               <input
                 class="form-control"
                 id="text"
                 required
-                [(ngModel)]="quiz.alternative.text"
+                [(ngModel)]="quiz.alternative[1].text2"
                 name="text"
               />
             </div>
@@ -88,7 +88,7 @@
                 class="form-control"
                 id="isCorrect"
                 required
-                [(ngModel)]="quiz.alternative.isCorrect"
+                [(ngModel)]="quiz.alternative[1].isCorrect2"
                 name="isCorrect
                 "
               />
@@ -96,12 +96,12 @@
           </div>
           <div class="form-group">
             <div>
-              <label for="alternative">Answer 1</label>
+              <label for="alternative">Answer 3</label>
               <input
                 class="form-control"
                 id="text"
                 required
-                [(ngModel)]="quiz.alternative.text"
+                [(ngModel)]="quiz.alternative[2].text3"
                 name="text"
               />
             </div>
@@ -110,7 +110,7 @@
                 class="form-control"
                 id="isCorrect"
                 required
-                [(ngModel)]="quiz.alternative.isCorrect"
+                [(ngModel)]="quiz.alternative[2].isCorrect3"
                 name="isCorrect
                 "
               />
@@ -118,12 +118,12 @@
           </div>
           <div class="form-group">
             <div>
-              <label for="alternative">Answer 1</label>
+              <label for="alternative">Answer 4</label>
               <input
                 class="form-control"
                 id="text"
                 required
-                [(ngModel)]="quiz.alternative.text"
+                [(ngModel)]="quiz.alternative[3].text4"
                 name="text"
               />
             </div>
@@ -132,7 +132,7 @@
                 class="form-control"
                 id="isCorrect"
                 required
-                [(ngModel)]="quiz.alternative.isCorrect"
+                [(ngModel)]="quiz.alternative[3].isCorrect4"
                 name="isCorrect
                 "
               />

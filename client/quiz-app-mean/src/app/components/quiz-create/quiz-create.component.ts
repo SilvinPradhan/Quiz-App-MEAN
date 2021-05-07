@@ -11,10 +11,24 @@ export class QuizCreateComponent implements OnInit {
   quiz = {
     title: '',
     description: '',
-    alternative: {
-      text: '',
-      isCorrect: false,
-    },
+    alternative: [
+      {
+        text1: '',
+        isCorrect1: false,
+      },
+      {
+        text2: '',
+        isCorrect2: false,
+      },
+      {
+        text3: '',
+        isCorrect3: false,
+      },
+      {
+        text4: '',
+        isCorrect4: false,
+      },
+    ],
   };
   submitted = false;
 
@@ -27,8 +41,20 @@ export class QuizCreateComponent implements OnInit {
       description: this.quiz.description,
       alternative: [
         {
-          text: this.quiz.alternative.text,
-          isCorrect: this.quiz.alternative.isCorrect,
+          text1: this.quiz.alternative[0].text1,
+          isCorrect1: this.quiz.alternative[0].isCorrect1,
+        },
+        {
+          text2: this.quiz.alternative[1].text2,
+          isCorrect2: this.quiz.alternative[1].isCorrect2,
+        },
+        {
+          text3: this.quiz.alternative[2].text3,
+          isCorrect3: this.quiz.alternative[2].isCorrect3,
+        },
+        {
+          text4: this.quiz.alternative[3].text4,
+          isCorrect4: this.quiz.alternative[3].isCorrect4,
         },
       ],
     };
@@ -49,10 +75,24 @@ export class QuizCreateComponent implements OnInit {
     this.quiz = {
       title: '',
       description: '',
-      alternative: {
-        text: '',
-        isCorrect: false,
-      },
+      alternative: [
+        {
+          text1: '',
+          isCorrect1: false,
+        },
+        {
+          text2: '',
+          isCorrect2: false,
+        },
+        {
+          text3: '',
+          isCorrect3: false,
+        },
+        {
+          text4: '',
+          isCorrect4: false,
+        },
+      ],
     };
   }
 }
