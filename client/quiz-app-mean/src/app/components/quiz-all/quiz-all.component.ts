@@ -11,11 +11,11 @@ export class QuizAllComponent implements OnInit {
   currentQuiz = null;
   currentIndex = -1;
 
-  constructor(private apiService: ApiService) {}
-
-  ngOnInit(): void {
+  constructor(private apiService: ApiService) {
     this.readQuizzes();
   }
+
+  ngOnInit(): void {}
 
   readQuizzes() {
     this.apiService.getQuizzes().subscribe(
