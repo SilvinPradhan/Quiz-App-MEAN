@@ -33,7 +33,9 @@ export class ApiService {
 
   deleteQuiz(id: any): Observable<any> {
     let url = `${this.baseUri}/quiz/${id}`;
-    return this.http.delete(url);
+    return this.http
+      .delete(url, { headers: this.headers })
+      .pipe(catchError(this.errorMgmt));
   }
 
   // Error handling

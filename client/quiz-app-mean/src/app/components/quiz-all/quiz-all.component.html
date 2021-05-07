@@ -1,1 +1,80 @@
-<p>quiz-all works!</p>
+<div class="list row">
+  <div class="col-md-8 offset-md-2">
+    <mdb-card>
+      <h4 class="card-title font-weight-bold mb-2 p-3 text-center">
+        List of Quizzes
+      </h4>
+    </mdb-card>
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let quiz of Quizzes; let i = index"
+        [class.active]="i == currentIndex"
+        (click)="setActiveQuiz(quiz, i)"
+      >
+        <div *ngIf="currentQuiz">
+          <h4>Question {{ currentIndex + 1 }}</h4>
+        </div>
+
+        <strong
+          ><span class="border border-primary font-weight-bold p-1"
+            ><label>Title:</label></span
+          >
+          {{ quiz.title }}</strong
+        >
+        <br />
+        <p>
+          <span class="border border-info font-italic p-1"
+            ><label>Description:</label></span
+          >{{ quiz.description }}
+        </p>
+        <div class="col-md-8 offset-md-2">
+          <div class="form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="materialUnchecked"
+            />
+            <label class="form-check-label" for="materialUnchecked">{{
+              quiz.option1
+            }}</label>
+          </div>
+          <div class="form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="materialUnchecked"
+            />
+            <label class="form-check-label" for="materialUnchecked">{{
+              quiz.option2
+            }}</label>
+          </div>
+          <div class="form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="materialUnchecked"
+            />
+            <label class="form-check-label" for="materialUnchecked">{{
+              quiz.option3
+            }}</label>
+          </div>
+          <div class="form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="materialUnchecked"
+            />
+            <label class="form-check-label" for="materialUnchecked">{{
+              quiz.option4
+            }}</label>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div *ngIf="!currentQuiz">
+      <br />
+      <p>Please click on a Quiz...</p>
+    </div>
+  </div>
+</div>

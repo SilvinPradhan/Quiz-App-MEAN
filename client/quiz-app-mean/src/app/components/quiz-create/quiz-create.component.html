@@ -1,6 +1,6 @@
 <div class="container" style="margin: auto">
   <div class="row">
-    <div class="col-md-8" style="margin-top: 150px">
+    <div class="col-md-8" style="margin-top: 40px">
       <mdb-card>
         <div
           class="view rgba-white-slight waves-light"
@@ -52,12 +52,12 @@
           </div>
           <div class="form-group">
             <div>
-              <label for="alternative">Answer 1</label>
+              <label for="alternative">Option 1</label>
               <input
                 class="form-control"
                 id="text"
                 required
-                [(ngModel)]="quiz.alternative[0].text1"
+                [(ngModel)]="quiz.option1"
                 name="text"
               />
             </div>
@@ -66,7 +66,7 @@
                 class="form-control"
                 id="isCorrect"
                 required
-                [(ngModel)]="quiz.alternative[0].isCorrect1"
+                [(ngModel)]="quiz.answer1"
                 name="isCorrect
                 "
               />
@@ -74,12 +74,12 @@
           </div>
           <div class="form-group">
             <div>
-              <label for="alternative">Answer 2</label>
+              <label for="alternative">Option 2</label>
               <input
                 class="form-control"
                 id="text"
                 required
-                [(ngModel)]="quiz.alternative[1].text2"
+                [(ngModel)]="quiz.option2"
                 name="text"
               />
             </div>
@@ -88,7 +88,7 @@
                 class="form-control"
                 id="isCorrect"
                 required
-                [(ngModel)]="quiz.alternative[1].isCorrect2"
+                [(ngModel)]="quiz.answer2"
                 name="isCorrect
                 "
               />
@@ -96,12 +96,12 @@
           </div>
           <div class="form-group">
             <div>
-              <label for="alternative">Answer 3</label>
+              <label for="alternative">Option 3</label>
               <input
                 class="form-control"
                 id="text"
                 required
-                [(ngModel)]="quiz.alternative[2].text3"
+                [(ngModel)]="quiz.option3"
                 name="text"
               />
             </div>
@@ -110,7 +110,7 @@
                 class="form-control"
                 id="isCorrect"
                 required
-                [(ngModel)]="quiz.alternative[2].isCorrect3"
+                [(ngModel)]="quiz.answer3"
                 name="isCorrect
                 "
               />
@@ -118,12 +118,12 @@
           </div>
           <div class="form-group">
             <div>
-              <label for="alternative">Answer 4</label>
+              <label for="alternative">Option 4</label>
               <input
                 class="form-control"
                 id="text"
                 required
-                [(ngModel)]="quiz.alternative[3].text4"
+                [(ngModel)]="quiz.option4"
                 name="text"
               />
             </div>
@@ -132,7 +132,7 @@
                 class="form-control"
                 id="isCorrect"
                 required
-                [(ngModel)]="quiz.alternative[3].isCorrect4"
+                [(ngModel)]="quiz.answer4"
                 name="isCorrect
                 "
               />
@@ -149,7 +149,11 @@
           </button>
         </div>
         <div *ngIf="submitted">
-          <h3>The Quiz has been submitted successfully!</h3>
+          <a
+            class="btn btn-success"
+            onclick="toastr.success('Quiz has been successfully posted!', {timeOut: 3000});"
+            >Quiz Created</a
+          >
           <button
             mdbBtn
             type="button"

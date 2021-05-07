@@ -4,8 +4,26 @@ const { erroHandler, errorHandler } = require('../helpers/dbErrorHandler');
 exports.create = async (req, res) => {
 	const { description } = req.body;
 	const { title } = req.body;
-	const { alternatives } = req.body;
-	let questions = new Questions({ description, alternatives, title });
+	const { option1 } = req.body;
+	const { option2 } = req.body;
+	const { option3 } = req.body;
+	const { option4 } = req.body;
+	const { answer1 } = req.body;
+	const { answer2 } = req.body;
+	const { answer3 } = req.body;
+	const { answer4 } = req.body;
+	let questions = new Questions({
+		description,
+		option1,
+		option2,
+		option3,
+		option4,
+		answer1,
+		answer2,
+		answer3,
+		answer4,
+		title,
+	});
 	questions.save((err, data) => {
 		if (err) {
 			console.log(err);
