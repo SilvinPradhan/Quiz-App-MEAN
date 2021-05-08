@@ -46,3 +46,7 @@
 <hr/>
 5.  Get All Quizzes -End Point
  <img src="images/Capture5.PNG" width="700"/>
+
+6. Get one quiz with the End Point
+   ** router.get('/quiz/:id', listSingle); **
+   This end point is used on fetching the data from the MongoDB using its "\_id" value.
