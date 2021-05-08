@@ -1,5 +1,5 @@
 {
-  "name": "node-js-getting-started",
+  "name": "quiz-app-mean",
   "version": "0.3.0",
   "description": "A sample Node.js app using Express 4",
   "engines": {
@@ -27,10 +27,6 @@
   "devDependencies": {
     "got": "^11.3.0",
     "tape": "^4.7.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
   },
   "keywords": [
     "node",
