@@ -12,7 +12,7 @@ import { catchError, map } from 'rxjs/operators';
 })
 export class ApiService {
   // http://localhost:5000/
-  baseUri: string = 'api';
+  baseUri: string = 'http://localhost:5000/api';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
   constructor(private http: HttpClient) {}
   // create quiz
