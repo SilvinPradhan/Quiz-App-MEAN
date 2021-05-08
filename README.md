@@ -27,4 +27,22 @@
 # Images
 
 1.  Web View
-    <img src="images/capture1.PNG" width="400"/>
+<img src="images/capture1.PNG" width="700"/>
+<hr />
+
+2.  Mobile Responsive
+    <img src="images/Capture2.PNG" width="700"/>
+
+<hr/>
+
+3.  Create Quiz- End point
+    <img src="images/Capture3.PNG" width="700"/>
+
+<hr/>
+
+4.  Submitted the Quiz
+    <img src="images/Capture4.PNG" width="700"/>
+
+<hr/>
+5.  Get All Quizzes -End Point
+ <img src="images/Capture5.PNG" width="700"/>
