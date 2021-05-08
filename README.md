@@ -7,9 +7,9 @@
 2.  Go into the Project -
     ** cd quiz-application-clone **
 3.  Install the Packages in both the folders:
-    ** npm install **
-    ** cd quiz-app-mean **
-    ** npm install **
+    ** npm install ** <br>
+    ** cd quiz-app-mean **<br>
+    ** npm install **<br>
 4.  Run Server and Client Side Locally
 
 -   For Client Side: [If you are inside the Folder(quiz-app-mean)]:
