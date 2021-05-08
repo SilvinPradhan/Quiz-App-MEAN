@@ -10,15 +10,14 @@ require('dotenv').config();
 const quizRoutes = require('./routes/quiz');
 
 express()
-	.use(express.static(path.join(__dirname, 'public')))
+	.use(express.static('./quiz-app-mean/dist/quiz-app-mean'))
 	.use(morgan('dev'))
 	.use(bodyParser.json())
 	.use(bodyParser.urlencoded({ extended: true }))
 	.use(cors())
 	.use('/api', quizRoutes)
-	.set('views', path.join(__dirname, 'views'))
 	.set('view engine', 'ejs')
-	.get('*', (req, res) => res.sendFile(path.join(__dirname, 'public/index.html')))
+	.get('/*', (req, res, next) => res.sendFile(path.join(__dirname + 'quiz-app-mean/dist/quiz-app-mean/index.html')))
 	.listen(PORT, () => console.log('Listening on ' + chalk.magentaBright(`http://localhost:${PORT}`)));
 // Database Configuration
 const db = async () => {
